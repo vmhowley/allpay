@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import "./App.css";
 import About from "./pages/About";
 import Signin from "./login/Signin";
+import Signup from "./login/Signup";
 
 
 
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="*" element={ <h1>Page Not Found</h1> } />
       </Routes>
     </BrowserRouter>

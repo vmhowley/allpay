@@ -7,6 +7,7 @@ import "./App.css";
 import About from "./pages/About";
 import Signin from "./login/Signin";
 import Signup from "./login/Signup";
+import Dashboard from "./pages/Dashboard";
 
 
 
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="*" element={ <h1>Page Not Found</h1> } />
       </Routes>
     </BrowserRouter>

@@ -3,6 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 * {
   box-sizing: border-box;
 }
@@ -53,6 +55,15 @@ header a {
 header a:hover {
   color: #161616;
   text-decoration: underline;
+}
+
+
+nav {
+  display: flex;
+  height: 48px;
+  align-items: center;
+  gap: 19px;
+  align-self: stretch;
 }
 
 .link-button {

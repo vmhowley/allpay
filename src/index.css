@@ -10,6 +10,7 @@
 }
 
 html, body {
+  background-color: #FCFCF7;
   font-family: 'Urbanist', sans-serif;
   user-select: none;
   margin: 0 auto;

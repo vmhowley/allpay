@@ -14,14 +14,38 @@ import SportsEsportsRoundedIcon from '@mui/icons-material/SportsEsportsRounded';
 import { Link } from 'react-router-dom'
 function Services() {
 
+    const serviceList =[
+       {
+        name: 'Electricity',
+        class1: 'bg-[#FFD300] bg-opacity-20 p-4 rounded-full',
+        icon: <ElectricBoltRoundedIcon className='text-[#FFD300]'/>,
+        path: 'electricity-bill',
+    },
+    {
+        name: 'Internet',
+        class1:'bg-[#FF981F] bg-opacity-20 p-4 rounded-full',
+        icon: <ElectricBoltRoundedIcon className='text-[#FF981F]' />,
+        path: 'internet-bill',
+    },
+    {
+        name: 'Water',
+        class1:'bg-[#1A96F0] bg-opacity-20  p-4 rounded-full',
+        icon: <WaterDropRoundedIcon className='text-[#1A96F0]' />,
+        path: 'water-bill',
+    },
+
+]
   return (
 <div className='grid grid-cols-4 gap-6 justify-center content-center items-center font-bold'>
-        <Link to='electricity-bill' className='flex flex-col justify-center items-center gap-2 flex-1  h-[80px] '>
-            <div className='bg-[#FFD300] bg-opacity-20 p-4 rounded-full'>
-            <ElectricBoltRoundedIcon className='text-[#FFD300]' />
-            </div>
-            <p>Electricity</p>
-        </Link>
+{serviceList.map((service) => 
+
+<Link key={service.name} to='electricity-bill' className='flex flex-col justify-center items-center gap-2 flex-1  h-[80px] '>
+    <div className={service.class1}>
+    {service.icon}
+    </div>
+    <p>{service.name}</p>
+</Link>
+)}        
         <Link  className='flex flex-col justify-center items-center gap-2 flex-1  h-[80px] '>
             <div className='bg-[#FF981F] bg-opacity-20 p-4 rounded-full'>
             <WifiRoundedIcon className='text-[#FF981F]' />

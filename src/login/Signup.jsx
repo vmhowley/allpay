@@ -10,7 +10,7 @@ function Signup() {
   const navigate = useNavigate();
   return (
     <>
-      <div className="flex ">
+      <div className="flex justify-center">
         <div
           onClick={() => {
             navigate("/", { replace: false });
@@ -52,8 +52,8 @@ function Signup() {
           Sign in with Password
         </button>
       </div>
-      <div className="w-screen flex items-center content-center gap-4 mt-6">
-        <hr className="w-[120px] text-black" />
+      <div className="flex justify-center-center content-center gap-4 mt-6">
+        <hr className="w-[120px] text-black"/>
         <p className="font-bold text-lg text-neutral-500">or continue with</p>
         <hr className="w-[120px] text-black" />
       </div>

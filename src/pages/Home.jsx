@@ -18,10 +18,10 @@ function Home() {
       <header>
         <Link className="site-logo bg-gradient-to-tr from-red-500 to-blue-500 text-transparent bg-clip-text">Welcome {user.name}</Link>
         <nav>
-          <Link to={"/"}>Home</Link>
-          <Link to={"/ebank"}> Internet Banking</Link>
-          <Link to={"/about"}> About</Link>
-          <Link to={"/about"}> Profile</Link>
+          <Link to={"/login"}>Login</Link>
+          <Link to={"/dashboard"}> Dashboard</Link>
+          <Link to={"/about"}> ...</Link>
+          <Link to={"/about"}> Logout</Link>
 
         </nav>
       </header>

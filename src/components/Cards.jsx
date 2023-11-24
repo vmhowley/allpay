@@ -70,7 +70,7 @@ const Cards = () => {
                     <div className="pt-3 pr-3">
                       <div className="flex justify-start gap-8">
                         <div className="">
-                          <p className="font-semibold tracking-wider text-md">{card.name_on_card}</p>
+                          <p className="font-semibold tracking-wider text-md line-clamp-1">{card.name_on_card}</p>
    
                         </div>
                         <div className=" ">

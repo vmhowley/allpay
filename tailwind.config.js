@@ -7,11 +7,6 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [
-    
-  ],
-  corePlugins: {
-    preflight: true,
-  },
+  plugins: [],
 }
 

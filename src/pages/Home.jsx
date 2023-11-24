@@ -18,7 +18,7 @@ function Home() {
       <header>
         <Link className="site-logo bg-gradient-to-tr from-red-500 to-blue-500 text-transparent bg-clip-text">Welcome {user.name}</Link>
         <nav>
-          <Link to={"/login"}>Login</Link>
+          <Link to={"/login"} replace="true">Login</Link>
           <Link to={"/dashboard"}> Dashboard</Link>
           <Link to={"/about"}> ...</Link>
           <Link to={"/about"}> Logout</Link>

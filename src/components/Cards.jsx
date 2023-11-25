@@ -9,7 +9,7 @@ const Cards = () => {
   const cards = [
     {
       id: 1,
-      name_on_card: "Victor M Howley",
+      name_on_card: "Adrew Ainsley",
       onhold:"$5,600",
       card_number: "**** **** **** 4578",
       exp: "06/25",
@@ -18,7 +18,7 @@ const Cards = () => {
     },
     {
       id: 2,
-      name_on_card: "Victor M Howley",
+      name_on_card: "Adrew Ainsley",
       onhold:"$15,692",
       card_number: "**** **** **** 4792",
       exp: "02/23",
@@ -27,7 +27,7 @@ const Cards = () => {
     },
     {
       id: 3,
-      name_on_card: "Victor M Howley",
+      name_on_card: "Adrew Ainsley",
       onhold:"$2,900",
       card_number: "**** **** **** 5772",
       exp: "02/23",

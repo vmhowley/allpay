@@ -85,8 +85,8 @@ function Services() {
       class1: "bg-[#F54336] bg-opacity-20  p-4 rounded-full",
       icon: <SportsEsportsRoundedIcon className="text-[#F54336]" />,
       path: "games",
-    },
-  ];
+    },];
+
   return (
     <div className="grid grid-cols-4 gap-6 justify-center content-center items-center font-bold">
       {serviceList.map((service) => (

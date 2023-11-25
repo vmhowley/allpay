@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import FbLogo from "../images/Fbicon.png";
 import GoogleIcon from "../images/google.png";
 import AppleIcon from "../images/apple.png";
+import Back from "../components/Back";
 
 
 function Signin() {
@@ -12,9 +13,7 @@ function Signin() {
 
   return (
     <div className="grid">
-      <div onClick={() => {navigate("/", { replace: false });}} className="flex cursor-pointer w-6 h-6">
-        <ArrowBackRoundedIcon />
-      </div>
+      <Back />
       <div className="grid gap-4 place-content-center place-items-center">
         <img src={SignLogo} alt="logoSign" className="mt-8 " />
         <h1 className="font-bold text-5xl text-center  text-gray-700 ">Let&apos;s you in</h1>

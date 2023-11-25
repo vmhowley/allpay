@@ -6,19 +6,13 @@ import EmailOutlinedIcon from "@mui/icons-material/Email";
 import FbLogo from "../images/Fbicon.png";
 import GoogleIcon from "../images/google.png";
 import AppleIcon from "../images/apple.png";
+import Back from "../components/Back";
 function Signup() {
   const navigate = useNavigate();
   return (
     <>
       <div className="flex justify-center">
-        <div
-          onClick={() => {
-            navigate("/", { replace: false });
-          }}
-          className="flex cursor-pointer h-6 w-6"
-        >
-          <ArrowBackRoundedIcon />
-        </div>
+        <Back />
         <div className="mt-20 ">
           <p className="text-[48px] font-bold text-left leading-[52.8px] ">
             Create your Accout

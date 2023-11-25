@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Signin from "./login/Signin";
 import Signup from "./login/Signup";
 import Dashboard from "./pages/Dashboard";
+import Transfer from "./pages/Transfer";
 
 
 
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/login" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/transfer" element={<Transfer />} />
         <Route path="*" element={ <h1>Page Not Found</h1> } />
       </Routes>
     </BrowserRouter>

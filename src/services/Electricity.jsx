@@ -31,6 +31,7 @@ function Electricity() {
                 <input type="text" placeholder='Enter your ID' className='h-[56px] rounded-xl text-[#212121] bg-[#e9e9e9] font-bold ps-5' />
             </form>
             <button className='bg-[#246BFD] p-4 w-full rounded-full mt-4'>Continue</button>
+            
         </div>
       </div>      
   )

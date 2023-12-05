@@ -13,7 +13,7 @@ function Signin() {
 
   return (
     <div className="grid">
-      <Back />
+      <Back name='Sign In'/>
       <div className="grid gap-4 place-content-center place-items-center">
         <img src={SignLogo} alt="logoSign" className="mt-8 " />
         <h1 className="font-bold text-5xl text-center  text-gray-700 ">Let&apos;s you in</h1>

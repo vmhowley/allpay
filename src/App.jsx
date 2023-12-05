@@ -9,6 +9,7 @@ import Signin from "./login/Signin";
 import Signup from "./login/Signup";
 import Dashboard from "./pages/Dashboard";
 import Transfer from "./pages/Transfer";
+import Electricity from "./services/Electricity";
 
 
 
@@ -19,12 +20,13 @@ export default function App() {
   return (
     <BrowserRouter>  
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route index element={<Dashboard />} />
         <Route path="/transfer" element={<Transfer />} />
+        <Route path="/electricity-bill" element={<Electricity/>} />
         <Route path="*" element={ <h1>Page Not Found</h1> } />
       </Routes>
     </BrowserRouter>

@@ -11,13 +11,11 @@ function Signup() {
   const navigate = useNavigate();
   return (
     <>
-      <div className="flex justify-center">
-        <Back />
-        <div className="mt-20 ">
-          <p className="text-[48px] font-bold text-left leading-[52.8px] ">
+        <Back name='Sing Up' />
+        <div className="flex justify-center items-center mt-20 ">
+          <p className=" text-[50px] font-bold  ">
             Create your Accout
           </p>
-        </div>
       </div>
       <div className="grid mt-12 justify-center">
         <EmailOutlinedIcon className="relative top-10 left-2 h-6 w-6 text-neutral-500" />

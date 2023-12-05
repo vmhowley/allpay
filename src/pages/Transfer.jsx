@@ -53,10 +53,7 @@ function Transfer() {
     ]
   return (
     <>
-      <div className="flex w-screen gap-4 items-center">
-      <Back />
-        <h1 className='font-bold text-2xl '>Transfer Money</h1>
-      </div> 
+      <Back name="Transfer Money"/> 
       <div className='grid gap-4 mt-8'>
         <div className='flex items-center'>
         <SearchIcon className='relative left-9' />

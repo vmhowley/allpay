@@ -27,11 +27,11 @@ function Electricity() {
         </div>
         <div className='p-6'>
             <form action="" className='grid text-left gap-2'>
-                <label htmlFor="" className='font-bold text-[18px]'>Customer ID</label>
-                <input type="text" placeholder='Enter your ID' className='h-[56px] rounded-xl text-[#212121] bg-[#e9e9e9] font-bold ps-5' />
+                <label htmlFor="cid" className='font-bold text-[18px]'>Customer ID</label>
+                <input name='cid' type="number" placeholder='Enter your ID' className='h-[56px] rounded-xl text-[#212121] bg-[#e9e9e9] font-bold ps-5' />
             </form>
             <button className='bg-[#246BFD] p-4 w-full rounded-full mt-4'>Continue</button>
-            
+
         </div>
       </div>      
   )

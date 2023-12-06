@@ -6,31 +6,7 @@ import { motion } from 'framer-motion';
 
 
 
-function clicked () {
 
-  let but = document.getElementById("but");
-  let video = document.getElementById("vid");
-  let mediaDevices = navigator.mediaDevices;
-  video.muted = true;
-  
-  
-  
-  // Accessing the user camera and video.
-  mediaDevices
-  .getUserMedia({
-              video: true,
-              audio: true,
-          })
-          .then((stream) => {
-
-              // Changing the source of video to current stream.
-              video.srcObject = stream;
-              video.addEventListener("loadedmetadata", () => {
-                  video.play();
-                });
-          })
-          .catch(alert);
-       }
 
 function Internet() {
   
@@ -69,6 +45,7 @@ function Internet() {
               Customer ID
             </label>
             <input
+            id="cid"
               name="cid"
               type="number"
               placeholder="Enter your ID"
@@ -81,10 +58,6 @@ function Internet() {
           >
             Continue
           </button>
-          <div>
-            <video id="vid"></video>
-          </div>
-          <button onClick={clicked}>Open cam</button>
         </div>
         
       ) : (

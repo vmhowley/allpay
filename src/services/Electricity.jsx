@@ -38,6 +38,7 @@ function Electricity() {
               Customer ID
             </label>
             <input
+              id="cid"
               name="cid"
               type="number"
               placeholder="Enter your ID"

@@ -12,7 +12,7 @@ function Dashboard() {
   return <>
             <motion.div className="gap-6 grid mb-20"
             
-            initial={{width: 1}}
+            initial={{width: 0}}
             animate={{width: "100%"}}
             exit={{x: window.innerWidth, transition:{duration: 0.1} }}
             >

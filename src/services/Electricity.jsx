@@ -54,7 +54,7 @@ function Electricity() {
         </div>
       ) : (
         <div className="grid gap-4 justify-center">
-          <div className="w-96 h-96 p-7 bg-white rounded-3xl shadow flex-col justify-start items-center gap-6 inline-flex">
+          <div className="w-96 h-96 p-7 bg-white rounded-3xl  flex-col justify-start items-center gap-6 inline-flex  shadow-rose-500  shadow  ">
             <div className="w-20 h-20 relative">
               <img
                 className="w-20 h-20 left-0 top-0 absolute rounded-full"

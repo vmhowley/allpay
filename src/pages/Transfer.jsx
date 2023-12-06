@@ -4,10 +4,10 @@ import { useNavigate, Link } from "react-router-dom";
 import SearchIcon from '@mui/icons-material/Search';
 import Avatar from '../images/avatar.png'
 import Back from '../components/Back';
+import { motion } from 'framer-motion';
 
 
 function Transfer() {
-    const navigate = useNavigate();
 
     const beneficiaries = [
         {
@@ -51,8 +51,13 @@ function Transfer() {
             fav: true,
         },
     ]
+
   return (
-    <>
+    <motion.div
+    initial={{width: 0}}
+    animate={{width: "100%"}}
+    exit={{x: window.innerWidth, transition:{duration: 0.1} }}
+    >
       <Back name="Transfer Money"/> 
       <div className='grid gap-4 mt-8'>
         <div className='flex items-center'>
@@ -90,7 +95,7 @@ function Transfer() {
         </div>
         <button className='bg-[#246BFD] rounded-full w-14 h-14 text-white font-bold text-2xl absolute bottom-6 right-6'>+</button>
         </div>     
-      </>      
+      </motion.div>      
   )
 }
 

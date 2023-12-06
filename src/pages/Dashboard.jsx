@@ -1,16 +1,21 @@
 import React from "react";
-import Avatar from "../images/avatar.png";
-import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
-import DiscountOutlinedIcon from "@mui/icons-material/DiscountOutlined";
+
 import Navbar from "../components/Navbar";
 import Cards from "../components/Cards";
 import Actions from "../components/Actions";
 import Services from "../components/Services";
 import Bottombar from "../components/Bottombar";
 import { Link } from "react-router-dom";
+import { motion } from 'framer-motion'
+
 function Dashboard() {
   return <>
-            <div className="gap-6 grid mb-20">
+            <motion.div className="gap-6 grid mb-20"
+            
+            initial={{width: 0}}
+            animate={{width: "100%"}}
+            exit={{x: window.innerWidth, transition:{duration: 0.1} }}
+            >
             <Navbar />
             <Cards />
             <Actions />
@@ -20,7 +25,7 @@ function Dashboard() {
             </div>
             <Services />
             <Bottombar />
-            </div>
+            </motion.div>
 </>;
 }
 

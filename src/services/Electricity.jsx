@@ -1,13 +1,11 @@
 import React from "react";
-import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
-import { useNavigate, Link } from "react-router-dom";
-import SearchIcon from "@mui/icons-material/Search";
 import Avatar from "../images/avatar.png";
 import Back from "../components/Back";
 import ElectricBoltRoundedIcon from "@mui/icons-material/ElectricBoltRounded";
 
 function Electricity() {
-  function handleClick(e) {
+  
+  function handleClick() {
     setClick(click + 1);
   }
 

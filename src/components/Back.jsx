@@ -1,6 +1,8 @@
 import React from 'react'
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
 
 function Back(props) {
   const navigate = useNavigate();

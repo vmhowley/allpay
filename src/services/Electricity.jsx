@@ -2,6 +2,7 @@ import React from "react";
 import Avatar from "../images/avatar.png";
 import Back from "../components/Back";
 import ElectricBoltRoundedIcon from "@mui/icons-material/ElectricBoltRounded";
+import { motion } from 'framer-motion';
 
 function Electricity() {
   
@@ -12,7 +13,11 @@ function Electricity() {
   const [click, setClick] = React.useState(0);
 
   return (
-    <div className="grid gap-4 mb-10">
+    <motion.div
+    initial={{width: 0}}
+    animate={{width: "100%"}}
+    exit={{x: window.innerWidth, transition:{duration: 0.1} }}
+     className="grid gap-4 mb-10">
       <Back name="Electricity Bill" />
       <div className="grid  mt-8 flex-col justify-center items-center gap-2 flex-1   ">
         <div className="bg-[#FFD300] bg-opacity-10 p-10 rounded-full text-[#FFD300]">
@@ -23,8 +28,8 @@ function Electricity() {
         <h1 className="font-bold text-2xl">Pay Electricity Bill</h1>
         <p>
           Pay electricity bill safely, conveniently & easily.
-          <p>You can pay anytime and anywhere!</p>
         </p>
+          <p>You can pay anytime and anywhere!</p>
       </div>
       {click === 0 ? (
         <div className="p-6">
@@ -100,7 +105,7 @@ function Electricity() {
           </div>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }
 

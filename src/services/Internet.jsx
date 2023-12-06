@@ -2,28 +2,65 @@ import React from "react";
 import Avatar from "../images/avatar.png";
 import Back from "../components/Back";
 import WifiRoundedIcon from "@mui/icons-material/WifiRounded";
+import { motion } from 'framer-motion';
+
+
+
+function clicked () {
+
+  let but = document.getElementById("but");
+  let video = document.getElementById("vid");
+  let mediaDevices = navigator.mediaDevices;
+  video.muted = true;
+  
+  
+  
+  // Accessing the user camera and video.
+  mediaDevices
+  .getUserMedia({
+              video: true,
+              audio: true,
+          })
+          .then((stream) => {
+
+              // Changing the source of video to current stream.
+              video.srcObject = stream;
+              video.addEventListener("loadedmetadata", () => {
+                  video.play();
+                });
+          })
+          .catch(alert);
+       }
 
 function Internet() {
-  function handleClick(e) {
+  
+  
+  
+  function handleClick() {
     setClick(click + 1);
+
   }
 
   const [click, setClick] = React.useState(0);
 
   return (
-    <div className="grid gap-4 mb-10">
+    <motion.div
+    initial={{width: 0}}
+    animate={{width: "100%"}}
+    exit={{x: window.innerWidth, transition:{duration: 0.1} }}
+     className="grid gap-4 mb-10">
       <Back name="Internet Bill" />
       <div className="grid  mt-8 flex-col justify-center items-center gap-2 flex-1   ">
         <div className="bg-[#FF981F] bg-opacity-10 p-10 rounded-full text-[#FF981F]">
           <WifiRoundedIcon sx={{ fontSize: 60 }} />
         </div>
       </div>
-      <div className="grid gap-4">
+      <div className="grid gap-2">
         <h1 className="font-bold text-2xl">Pay Internet Bill</h1>
         <p>
           Pay Internet bill safely, conveniently & easily.
-          <p>You can pay anytime and anywhere!</p>
         </p>
+          <p>You can pay anytime and anywhere!</p>
       </div>
       {click === 0 ? (
         <div className="p-6">
@@ -44,7 +81,12 @@ function Internet() {
           >
             Continue
           </button>
+          <div>
+            <video id="vid"></video>
+          </div>
+          <button onClick={clicked}>Open cam</button>
         </div>
+        
       ) : (
         <div className="grid gap-4 justify-center">
           <div className="w-96 h-96 p-7 bg-white rounded-3xl shadow flex-col justify-start items-center gap-6 inline-flex">
@@ -97,9 +139,11 @@ function Internet() {
               Confirm Payment
             </div>
           </div>
+      
         </div>
+        
       )}
-    </div>
+    </motion.div>
   );
 }
 

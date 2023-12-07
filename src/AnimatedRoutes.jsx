@@ -9,6 +9,7 @@ import Electricity from "./services/Electricity";
 import Internet from "./services/Internet";
 import Home from "./pages/Home";
 import { AnimatePresence } from "framer-motion";
+import InOut from "./pages/InOut";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -23,6 +24,7 @@ function AnimatedRoutes() {
         <Route path="/transfer" element={<Transfer />} />
         <Route path="/electricity-bill" element={<Electricity />} />
         <Route path="/internet-bill" element={<Internet />} />
+        <Route path="/inout" element={<InOut />} />
         <Route path="*" element={<h1>Page Not Found</h1>} />
       </Routes>
     </AnimatePresence>

@@ -2,7 +2,7 @@ import React from "react";
 import Back from "../components/Back";
 import Avatar from "../images/avatar.png";
 import Mcdonald from "../images/mcdonald.svg";
-import AirBnb from "../images/AirBnb.svg";
+import AirBnb from "../images/airbnb.svg";
 import Darron from "../images/Darron.svg";
 
 function InOut() {

@@ -4,6 +4,7 @@ import Avatar from "../images/avatar.png";
 import Mcdonald from "../images/mcdonald.svg";
 import AirBnb from "../images/airbnb.svg";
 import Darron from "../images/Darron.svg";
+import Netflix from "../images/netflix.svg";
 
 function InOut() {
   const transactions = [
@@ -36,6 +37,16 @@ function InOut() {
       type: "Income",
       amount: "$550",
       img: Darron,
+    },
+    {
+      id: "4",
+      name: "Netflix",
+      description: "Subscription",
+      date: "Dec 28 2023",
+      time: "10:34:59 AM",
+      type: "Expense",
+      amount: "$32",
+      img: Netflix,
     },
   ];
   return (

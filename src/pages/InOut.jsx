@@ -15,16 +15,29 @@ function InOut() {
                 <h1 className='font-bold'>Showing 25 of 849</h1>
                 <p className='text-[#246BFD] font-semibold'>Download</p>
             </div>
-            <div className='grid p-6 gap-4 '>
-                <div className='flex gap-4  bg-white items-center rounded h-[98px]  '>
+            <div className='grid p-6 gap-4'>
+                <div className='flex gap-4 bg-white items-center rounded h-[98px]'>
                     <div className='grid items-center'>
                     <img src={Avatar} alt="asdas" />
                     </div>
-                    <div className='tracking-wider text-left grid gap-2'>
-                        <h1 className='font-bold text-lg'>McDonald's Orders</h1>
+                    <div className='tracking-wider sm:text-center text-left grid gap-2 w-full'>
+                        <h1 className='font-bold text-lg'>McDonald&apos;s Orders</h1>
                         <p className='text-sm'>Dec 24, 2023 \ 14:26:34 PM</p>
                     </div>
-                    <div className='grid relative left-10 text-right'>
+                    <div className='text-right'>
+                        <h1 className='font-bold text-red-600'>$25</h1>
+                        <p className='text-neutral-500'>Expense</p>
+                    </div>
+                </div>
+                <div className='flex gap-4  bg-white items-center rounded h-[98px]'>
+                    <div className='grid items-center'>
+                    <img src={Avatar} alt="asdas" />
+                    </div>
+                    <div className='tracking-wider sm:text-center text-left grid gap-2 w-full'>
+                        <h1 className='font-bold text-lg'>McDonald&apos;s Orders</h1>
+                        <p className='text-sm'>Dec 24, 2023 \ 14:26:34 PM</p>
+                    </div>
+                    <div className='grid  text-right'>
                         <h1 className='font-bold text-red-600'>$25</h1>
                         <p className='text-neutral-500'>Expense</p>
                     </div>
@@ -33,11 +46,11 @@ function InOut() {
                     <div className='grid items-center'>
                     <img src={Avatar} alt="asdas" />
                     </div>
-                    <div className='tracking-wider text-left grid gap-2'>
-                        <h1 className='font-bold text-lg'>McDonald's Orders</h1>
+                    <div className='tracking-wider sm:text-center text-left grid gap-2 w-full'>
+                        <h1 className='font-bold text-lg '>McDonald&apos;s Orders</h1>
                         <p className='text-sm'>Dec 24, 2023 \ 14:26:34 PM</p>
                     </div>
-                    <div className='grid relative left-10 text-right'>
+                    <div className='grid  text-right'>
                         <h1 className='font-bold text-red-600'>$25</h1>
                         <p className='text-neutral-500'>Expense</p>
                     </div>
@@ -46,11 +59,11 @@ function InOut() {
                     <div className='grid items-center'>
                     <img src={Avatar} alt="asdas" />
                     </div>
-                    <div className='tracking-wider text-left grid gap-2'>
+                    <div className='tracking-wider sm:text-center text-left grid gap-2 w-full'>
                         <h1 className='font-bold text-lg'>McDonald's Orders</h1>
                         <p className='text-sm'>Dec 24, 2023 \ 14:26:34 PM</p>
                     </div>
-                    <div className='grid relative left-10 text-right'>
+                    <div className='grid  text-right'>
                         <h1 className='font-bold text-red-600'>$25</h1>
                         <p className='text-neutral-500'>Expense</p>
                     </div>
@@ -59,24 +72,11 @@ function InOut() {
                     <div className='grid items-center'>
                     <img src={Avatar} alt="asdas" />
                     </div>
-                    <div className='tracking-wider text-left grid gap-2'>
+                    <div className='tracking-wider sm:text-center text-left grid gap-2 w-full'>
                         <h1 className='font-bold text-lg'>McDonald's Orders</h1>
                         <p className='text-sm'>Dec 24, 2023 \ 14:26:34 PM</p>
                     </div>
-                    <div className='grid relative left-10 text-right'>
-                        <h1 className='font-bold text-red-600'>$25</h1>
-                        <p className='text-neutral-500'>Expense</p>
-                    </div>
-                </div>
-                <div className='flex gap-4  bg-white items-center rounded h-[98px]  '>
-                    <div className='grid items-center'>
-                    <img src={Avatar} alt="asdas" />
-                    </div>
-                    <div className='tracking-wider text-left grid gap-2'>
-                        <h1 className='font-bold text-lg'>McDonald's Orders</h1>
-                        <p className='text-sm'>Dec 24, 2023 \ 14:26:34 PM</p>
-                    </div>
-                    <div className='grid relative left-10 text-right'>
+                    <div className='grid  text-right'>
                         <h1 className='font-bold text-red-600'>$25</h1>
                         <p className='text-neutral-500'>Expense</p>
                     </div>

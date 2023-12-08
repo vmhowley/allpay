@@ -14,7 +14,7 @@ const Cards = () => {
       card_number: "**** **** **** 4578",
       exp: "06/25",
       provider: "visa",
-      img: "https://t4.ftcdn.net/jpg/04/68/75/93/360_F_468759337_5IpJ9aQ4ktVwRIPaxVcWDuvjk4QpDvdj.jpg",
+      img: "https://wallpapers.com/images/hd/dark-gradient-6bly12umg2d4psr2.jpg",
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ const Cards = () => {
       card_number: "**** **** **** 4792",
       exp: "02/23",
       provider: "mastercard",
-      img: "https://e1.pxfuel.com/desktop-wallpaper/554/799/desktop-wallpaper-abstract-light-blue-triangle-geometric-backgrounds-blue-triangles-geometric-shapes.jpg",
+      img: "https://wallpapers.com/images/hd/dark-gradient-6bly12umg2d4psr2.jpg",
     },
     {
       id: 3,

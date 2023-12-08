@@ -10,7 +10,7 @@
 }
 
 html, body {
-  background-color: #FCFCF7;
+  background-color: #FEFFFA;
   font-family: 'Urbanist', sans-serif;
   user-select: none;
   margin: 0 auto;
@@ -23,6 +23,7 @@ html, body {
 body::-webkit-scrollbar {
 display: none;
 }
+
 
 body {
 -ms-overflow-style: none;
@@ -55,11 +56,3 @@ header a:hover {
   text-decoration: underline;
 }
 
-
-nav {
-  display: flex;
-  height: 48px;
-  align-items: center;
-  gap: 19px;
-  align-self: stretch;
-}

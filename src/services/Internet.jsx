@@ -4,10 +4,6 @@ import Back from "../components/Back";
 import WifiRoundedIcon from "@mui/icons-material/WifiRounded";
 import { motion } from 'framer-motion';
 
-
-
-
-
 function Internet() {
   
   
@@ -21,9 +17,9 @@ function Internet() {
 
   return (
     <motion.div
-    initial={{width: 0}}
-    animate={{width: "100%"}}
-    exit={{x: window.innerWidth, transition:{duration: 0.1} }}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
      className="grid gap-4 mb-10">
       <Back name="Internet Bill" />
       <div className="grid  mt-8 flex-col justify-center items-center gap-2 flex-1   ">
@@ -49,7 +45,7 @@ function Internet() {
               name="cid"
               type="number"
               placeholder="Enter your ID"
-              className="h-[56px] rounded-xl text-[#212121] bg-[#e9e9e9] font-bold ps-5"
+              className="h-[56px] rounded-xl text-[#212121] dark:bg-[#1F222A] bg-[#e9e9e9] font-bold ps-5"
             />
           </form>
           <button

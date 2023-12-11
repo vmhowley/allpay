@@ -11,10 +11,11 @@ import Home from "./pages/Home";
 import { AnimatePresence } from "framer-motion";
 import InOut from "./pages/InOut";
 
-function AnimatedRoutes() {
+const  AnimatedRoutes = ({isVisible}) => {
   const location = useLocation();
   return (
     <AnimatePresence>
+      {isVisible &&(
       <Routes location={location} key={location.pathname}>
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -27,6 +28,8 @@ function AnimatedRoutes() {
         <Route path="/inout" element={<InOut />} />
         <Route path="*" element={<h1>Page Not Found</h1>} />
       </Routes>
+      )
+  }
     </AnimatePresence>
   );
 }

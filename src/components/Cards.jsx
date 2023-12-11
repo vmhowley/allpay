@@ -4,6 +4,7 @@ import "swiper/css";
 import 'swiper/css/pagination';
 import 'swiper/css/effect-cards';
 import WifiOutlinedIcon from '@mui/icons-material/WifiOutlined';
+import { motion } from "framer-motion";
 
 const Cards = () => {
   const cards = [

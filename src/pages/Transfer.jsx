@@ -54,15 +54,15 @@ function Transfer() {
 
   return (
     <motion.div
-    initial={{width: 0}}
-    animate={{width: "100%"}}
-    exit={{x: window.innerWidth, transition:{duration: 0.1} }}
+    initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
     >
       <Back name="Transfer Money"/> 
       <div className='grid gap-4 mt-8'>
         <div className='flex items-center'>
         <SearchIcon className='relative left-9' />
-        <input className='rounded-xl bg-[#F5F5F5] h-[56px]  ps-10 w-[360px]' type="text" placeholder='Search'/>
+        <input className='rounded-xl dark:bg-[#1F222A] bg-[#F5F5F5] h-[56px]  ps-10 w-[360px]' type="text" placeholder='Search'/>
         </div>
         <div className='flex font-bold text-[#9E9E9E] justify-center gap-3 items-center'>
             <Link className=''>

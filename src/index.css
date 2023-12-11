@@ -10,7 +10,6 @@
 }
 
 html, body {
-  background-color: #FEFFFA;
   font-family: 'Urbanist', sans-serif;
   user-select: none;
   margin: 0 auto;
@@ -28,6 +27,9 @@ display: none;
 body {
 -ms-overflow-style: none;
 scrollbar-width: none;
+background-color: #FEFFFA;
+@apply dark:bg-[#181A20] dark:text-white;  
+
 }
 
 header {

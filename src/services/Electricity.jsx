@@ -14,9 +14,9 @@ function Electricity() {
 
   return (
     <motion.div
-    initial={{width: 0}}
-    animate={{width: "100%"}}
-    exit={{x: window.innerWidth, transition:{duration: 0.1} }}
+    initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
      className="grid gap-4 mb-10">
       <Back name="Electricity Bill" />
       <div className="grid  mt-8 flex-col justify-center items-center gap-2 flex-1   ">
@@ -42,7 +42,7 @@ function Electricity() {
               name="cid"
               type="number"
               placeholder="Enter your ID"
-              className="h-[56px] rounded-xl text-[#212121] bg-[#e9e9e9] font-bold ps-5"
+              className="h-[56px] rounded-xl text-[#212121] bg-[#e9e9e9] dark:bg-[#1F222A] font-bold ps-5"
             />
           </form>
           <button

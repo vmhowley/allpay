@@ -9,7 +9,7 @@ import { Link  } from 'react-router-dom'
 
 function Bottombar() {
   return (    
-        <nav id='bottom-bar' className='flex justify-between h-[60px] rounded-t-md fixed bottom-0 left-0 bg-white font-bold w-screen pt-2  text-[#929292]'>
+        <nav id='bottom-bar' className='flex justify-between h-[60px] rounded-t-md fixed bottom-0 left-0 bg-white dark:bg-[#181A20D9]  backdrop-blur-xl  font-bold w-screen pt-2  text-[#929292]'>
             <Link to='/' className='flex flex-col  place-items-center gap-[2px] flex-1 text-[#246BFD]'>
             <HomeRoundedIcon  />
             Home

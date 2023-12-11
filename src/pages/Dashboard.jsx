@@ -11,10 +11,9 @@ import { motion } from 'framer-motion'
 function Dashboard() {
   return <>
             <motion.div className="gap-6 grid mb-20"
-            
-            initial={{width: 0}}
-            animate={{width: "100%"}}
-            exit={{x: window.innerWidth, transition:{duration: 0.1} }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             >
             <Navbar />
             <Cards />
@@ -26,6 +25,7 @@ function Dashboard() {
             <Services />
             <Bottombar />
             </motion.div>
+            
 </>;
 }
 

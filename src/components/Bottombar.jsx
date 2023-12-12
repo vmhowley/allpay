@@ -5,28 +5,34 @@ import WalletRoundedIcon from '@mui/icons-material/WalletOutlined';
 import PersonRoundedIcon from '@mui/icons-material/PersonOutlined';
 import FlipIcon from '@mui/icons-material/FlipRounded';
 import { Link  } from 'react-router-dom'
-
+import ProfileIcon from '../assets/icons/Profile.svg'
+import CardIcon from '../assets/icons/card.svg'
+import {Home} from 'react-iconly'
+import {Chart} from 'react-iconly'
+import {Scan} from 'react-iconly'
+import {User} from 'react-iconly'
+import {Wallet} from 'react-iconly'
 
 function Bottombar() {
   return (    
-        <nav id='bottom-bar' className='flex justify-between h-[60px] rounded-t-md fixed bottom-0 left-0 bg-white dark:bg-[#181A20D9]  backdrop-blur-xl  font-bold w-screen pt-2  text-[#929292]'>
+        <nav id='bottom-bar' className='pb-1 text-sm flex justify-between items-center h-[70px] rounded-t-md fixed bottom-0 left-0 bg-white dark:bg-[#181A20D9]  backdrop-blur-xl  w-full  text-[#9E9E9E]'>
             <Link to='/' className='flex flex-col  place-items-center gap-[2px] flex-1 text-[#246BFD]'>
-            <HomeRoundedIcon  />
-            Home
+            <Home />
+              Home
             </Link>
             <Link to='/statistics' className='flex flex-col  place-items-center gap-[2px] flex-1'>
-            <InsertChartRoundedIcon />
-            Statistic
+              <Chart />
+              Statistic
             </Link>
             <Link to='/qrcode' className='flex place-items-center gap-[2px]  bg-[#246BFD] h-9 w-9  justify-center rounded-full text-white transform rotate-90 '>
-            <FlipIcon fontSize='' />
+            <Scan className='transform rotate-90'  stroke='bold' />
             </Link >
             <Link to='/wallet' className='flex flex-col  place-items-center gap-[2px] flex-1'>
-            <WalletRoundedIcon />
-            Wallet
+            <Wallet />
+            My Card
             </Link>
             <Link to='/profile' className='flex flex-col  place-items-center gap-[2px] flex-1'>
-            <PersonRoundedIcon />
+            <User />
             Profile
             </Link>
 

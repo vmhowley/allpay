@@ -48,12 +48,7 @@ const Cards = () => {
         {cards.map((card) => (
           <SwiperSlide className="text-white rounded-3xl" key={card.id} >
 
-                <div className="rounded-3xl relative">
-                  <img
-                    className="relative object-cover h-48 w-96 rounded-3xl"
-                    src={card.img}
-                  />
-
+                <div id="card-img" className="relative object-cover h-48 w-96 rounded-3xl ">
                   <div className="w-full px-8 absolute top-8">
                     <div className="flex justify-between">
                       <div className="">

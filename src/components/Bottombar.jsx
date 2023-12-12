@@ -29,7 +29,6 @@ function Bottombar() {
             <User />
             Profile
             </Link>
-
         </nav>
 
   )

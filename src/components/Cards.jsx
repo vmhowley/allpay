@@ -46,9 +46,9 @@ const Cards = () => {
           grabCursor={true}
       >
         {cards.map((card) => (
-          <SwiperSlide className="text-white rounded-3xl" key={card.id} >
+          <SwiperSlide className="text-white rounded-3xl backdrop-blur-md bg-[#246BFD40]" key={card.id} >
 
-                <div id="card-img" className="relative object-cover h-48 w-96 rounded-3xl ">
+                <div id="card-img" className=" relative object-cover h-48 w-96 rounded-3xl backdrop-blur-3xl">
                   <div className="w-full px-8 absolute top-8">
                     <div className="flex justify-between">
                       <div className="">

@@ -1,12 +1,6 @@
 import React from 'react'
-import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
-import InsertChartRoundedIcon from '@mui/icons-material/InsertChartOutlined';
-import WalletRoundedIcon from '@mui/icons-material/WalletOutlined';
-import PersonRoundedIcon from '@mui/icons-material/PersonOutlined';
-import FlipIcon from '@mui/icons-material/FlipRounded';
+
 import { Link  } from 'react-router-dom'
-import ProfileIcon from '../assets/icons/Profile.svg'
-import CardIcon from '../assets/icons/card.svg'
 import {Home} from 'react-iconly'
 import {Chart} from 'react-iconly'
 import {Scan} from 'react-iconly'

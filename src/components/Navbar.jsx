@@ -13,10 +13,9 @@ const [hidden, setHidden] = React.useState(false);
 function update() {
   if (scrollY?.current < scrollY?.prev) {
     setHidden(false);
-    console.log("visible");
   } else if (scrollY?.current > 10 && scrollY?.current > scrollY?.prev) {
     setHidden(true);
-    console.log("hidden");
+
   }
 }
 

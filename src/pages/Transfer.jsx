@@ -8,8 +8,13 @@ import { motion } from 'framer-motion';
 
 
 function Transfer() {
+    const [tab, setTab] = React.useState('all');
 
-    const beneficiaries = [
+    function handleTab (e) {
+        setTab(e)
+    }
+
+    const all = [
         {
             id: "1",
             name: "Juan Andres Perez Perez",
@@ -47,6 +52,71 @@ function Transfer() {
             name: "Cristian manuel Smith",
             phone: "829-369-6412",
             account_number: "56335473018",
+            provider: "Favorite",
+            fav: true,
+        },
+    ]
+    const favorite = [
+        {
+            id: "1",
+            name: "Juan Andres Perez Perez",
+            phone: "849-359-3432",
+            account_number: "40230403012",
+            provider: "Bank",
+            fav: true,
+        },
+ 
+        {
+            id: "2",
+            name: "Cristian manuel Smith",
+            phone: "829-369-6412",
+            account_number: "56335473018",
+            provider: "Bank",
+            fav: true,
+        },
+    ]
+
+    const bank = [
+        {
+            id: "1",
+            name: "Juan Andres Perez Perez",
+            phone: "849-359-3432",
+            account_number: "40230403012",
+            provider: "Bank",
+            fav: true,
+        },
+        {
+            id: "2",
+            name: "Cristian manuel Smith",
+            phone: "829-369-6412",
+            account_number: "56335473018",
+            provider: "Bank",
+            fav: true,
+        },
+    ]
+
+    const wallet = [
+        {
+            id: "2",
+            name: "Jhoe Smith",
+            phone: "829-369-6412",
+            account_number: "56335473018",
+            provider: "E-Wallet",
+            fav: true,
+        },
+        {
+            id: "3",
+            name: "Marcos corut Smith",
+            phone: "829-369-6412",
+            account_number: "56335473018",
+            provider: "E-Wallet",
+            fav: true,
+        },
+        {
+            id: "4",
+            name: "Julito manchez Smith",
+            phone: "829-369-6412",
+            account_number: "56335473018",
             provider: "E-Wallet",
             fav: true,
         },
@@ -65,25 +135,26 @@ function Transfer() {
         <input className='rounded-xl dark:bg-[#1F222A] bg-[#F5F5F5] h-[56px]  ps-10 w-[360px]' type="text" placeholder='Search'/>
         </div>
         <div className='flex font-bold text-[#9E9E9E] justify-center gap-3 items-center'>
-            <Link className=''>
-                <h1 className='w-20 h-10 flex items-center content-center justify-center text-[#246BFD]'>All</h1>
-                <hr className='bg-[#246BFD] h-1' />
-            </Link>
-            <Link>
-                <h1 className='w-20 h-10  flex items-center content-center justify-center'>Favorite</h1>
-                <hr className=' h-1 ' />
-            </Link>
-            <Link>
-                <h1 className='w-20 h-10 flex items-center content-center justify-center'>Bank</h1>
-                <hr className=' h-1 ' />
-            </Link>
-            <Link>
-                <h1 className='w-20 h-10  flex items-center content-center justify-center'>E-Wallet</h1>
-                <hr className='h-1 ' />
-            </Link>
+            <div onClick={() => {handleTab('all'); }} >
+                <h1  className={tab === 'all' ?  'w-20 h-10 flex items-center content-center justify-center text-[#246BFD]': 'w-20 h-10 flex items-center content-center justify-center' } >All</h1>
+                <hr className={tab === 'all' ?  'h-1 bg-[#246BFD]': '' } />
+            </div>
+            <div onClick={() => {handleTab('favorite'); }} >
+                <h1 className={tab === 'favorite' ?  'w-20 h-10 flex items-center content-center justify-center text-[#246BFD]': 'w-20 h-10 flex items-center content-center justify-center' }>Favorite</h1>
+                <hr className={tab === 'favorite' ?  'h-1 bg-[#246BFD]': '' } />
+            </div>
+            <div onClick={() => {handleTab('bank'); }}>
+                <h1 className={tab === 'bank' ?  'w-20 h-10 flex items-center content-center justify-center text-[#246BFD]': 'w-20 h-10 flex items-center content-center justify-center' }>Bank</h1>
+                <hr className={tab === 'bank' ?  'h-1 bg-[#246BFD]': '' } />
+            </div>
+            <div onClick={() => {handleTab('e-wallet'); }}>
+                <h1 className={tab === 'e-wallet' ?  'w-20 h-10 flex items-center content-center justify-center text-[#246BFD]': 'w-20 h-10 flex items-center content-center justify-center' }>E-Wallet</h1>
+                <hr className={tab === 'e-wallet' ?  'h-1 bg-[#246BFD]': '' } />
+            </div>
         </div>
         <div className='grid p-6 gap-4 divide-y'>
-            {beneficiaries.map((beneficiarie) => 
+
+            {tab === 'all' && all.map((beneficiarie) => 
             <div key={beneficiarie.id} className='flex gap-4'>
                 <img src={Avatar} alt="" />
             <div className='grid text-left'>
@@ -92,10 +163,43 @@ function Transfer() {
             </div>
             </div>
                 )}
-        </div>
-        <button className='bg-[#246BFD] rounded-full w-14 h-14 text-white font-bold text-2xl absolute bottom-6 right-6'>+</button>
-        </div>     
-      </motion.div>      
+                {tab === 'favorite' && favorite.map(( beneficiarie) => 
+                
+                <div key={ beneficiarie.id} className='flex gap-4'>
+                <img src={Avatar} alt="" />
+            <div className='grid text-left'>
+            <h1 className='font-bold tracking-wider'>{beneficiarie.name}</h1>
+            <p className='text-sm'>{beneficiarie.provider} | {beneficiarie.account_number}</p>
+            </div>
+            </div>
+                )
+            }
+                {tab === 'bank' && bank.map(( beneficiarie) => 
+                
+                <div key={ beneficiarie.id} className='flex gap-4'>
+                <img src={Avatar} alt="" />
+            <div className='grid text-left'>
+            <h1 className='font-bold tracking-wider'>{beneficiarie.name}</h1>
+            <p className='text-sm'>{beneficiarie.provider} | {beneficiarie.account_number}</p>
+            </div>
+            </div>
+                )
+            }
+                {tab === 'e-wallet' && wallet.map(( beneficiarie) => 
+                
+                <div key={ beneficiarie.id} className='flex gap-4'>
+                <img src={Avatar} alt="" />
+            <div className='grid text-left'>
+            <h1 className='font-bold tracking-wider'>{beneficiarie.name}</h1>
+            <p className='text-sm'>{beneficiarie.provider} | {beneficiarie.account_number}</p>
+            </div>
+            </div>
+                )
+            }
+                </div>
+                <button className='bg-[#246BFD] rounded-full w-14 h-14 text-white font-bold text-2xl absolute bottom-6 right-6'>+</button>
+                </div>     
+                </motion.div>      
   )
 }
 

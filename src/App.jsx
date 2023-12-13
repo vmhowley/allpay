@@ -15,6 +15,7 @@ import "./App.css";
 
 import AnimatedRoutes from "./AnimatedRoutes";
 import { appBarClasses } from "@mui/material";
+import TypeAmount from "./pages/TypeAmount";
 
 
 
@@ -35,6 +36,7 @@ const App = (isVisible) =>  {
         <Route path="/electricity-bill" element={<Electricity />} />
         <Route path="/internet-bill" element={<Internet />} />
         <Route path="/inout" element={<InOut />} />
+        <Route path="/type_amount" element={<TypeAmount />} />
         <Route path="*" element={<h1>Page Not Found</h1>} />
       </Routes>
       )

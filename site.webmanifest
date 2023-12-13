@@ -1,6 +1,6 @@
 {
-  "name": "E-Banking App By IBSYSTEMS",
-  "short_name": "E-Banking",
+  "name": " App By IBSYSTEMS",
+  "short_name": "Ebanking",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -14,9 +14,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "red",
+  "background_color": "red",
   "display": "standalone",
   "start_url": "./"
-
 }

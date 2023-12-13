@@ -7,18 +7,30 @@ import Services from "../components/Services";
 import Bottombar from "../components/Bottombar";
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion'
+import Skeleton from 'react-loading-skeleton'
 
 function Dashboard() {
-  return <>
-            <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            >
-            <div className="gap-6 grid mb-20 p-2 sm:p-0 ">
-            <Navbar />
 
-            <Cards />
+  const [loading, setLoading] = React.useState(false);
+
+   React.useEffect(() => {
+     setTimeout(() => {
+       setLoading(false);
+      }, 1000);
+    });
+    
+    return (
+       
+       <div className="flex">
+{loading ? ( <Skeleton className="h-40 flex-1"/> ):(
+    <motion.div 
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    >
+            <div className="gap-6 grid mb-20 p-2 sm:p-0 ">
+            {<Navbar /> || <Skeleton />}
+            {<Cards /> || <Skeleton />}
             <Actions />
             <div className="flex justify-between font-bold">
                 <h1 className="text-xl leading-6">Services</h1>
@@ -28,8 +40,9 @@ function Dashboard() {
             </div>
             <Bottombar />
             </motion.div>
+            )}
             
-</>;
+</div>);
 }
 
 export default Dashboard;

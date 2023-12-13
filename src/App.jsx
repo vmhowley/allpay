@@ -16,8 +16,7 @@ import "./App.css";
 import AnimatedRoutes from "./AnimatedRoutes";
 import { appBarClasses } from "@mui/material";
 
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
+
 
 
 const App = (isVisible) =>  {
@@ -25,7 +24,7 @@ const App = (isVisible) =>  {
   return (
     <BrowserRouter>  
 <AnimatePresence>
-      { 
+      {isVisible &&(
       <Routes location={location} key={location.pathname}>
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -38,7 +37,7 @@ const App = (isVisible) =>  {
         <Route path="/inout" element={<InOut />} />
         <Route path="*" element={<h1>Page Not Found</h1>} />
       </Routes>
-      || <Skeleton />
+      )
   }
     </AnimatePresence>   
      </BrowserRouter>

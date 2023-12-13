@@ -3,6 +3,8 @@ import Avatar from '../images/avatar.png'
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import DiscountOutlinedIcon from '@mui/icons-material/DiscountOutlined';
 import { motion, useScroll  } from 'framer-motion';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 function Navbar() {
 
     const { scrollY } = useScroll();
@@ -30,17 +32,21 @@ function update() {
         hidden: { opacity: 0, y: -25 }
       };
 
-
+const user = 
+{
+  name:"victor morillo",
+  message:"Good Morning",
+}
   return (
             <motion.nav className='flex  gap-[16px] w-[380px] items-center '
       variants={variants}
       animate={hidden ? "hidden" : "visible"}
       transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
             >
-                <img src={Avatar} alt="" />
+                <img className='w-14 h-14 rounded-full' src="https://placebeard.it/200x200" alt="assdas" />
                 <div className='w-full grid place-content-start text-left tracking-wide'>
-                    <p className='text-neutral-600'>Good Morning 👋</p>
-                    <h1 className='font-bold text-xl leading-6'>Adrew Ainsley</h1>
+                    <p className='text-neutral-600'>{user.message || <Skeleton />} 👋</p>
+                    <h1 className='font-bold text-xl leading-6'>{user.name || <Skeleton />}</h1>
                 </div>
                 <div className='gap-3 flex items'>
                     <DiscountOutlinedIcon />

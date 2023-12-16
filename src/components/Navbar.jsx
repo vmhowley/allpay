@@ -35,7 +35,7 @@ function update() {
 const user = 
 {
   name:"victor morillo",
-  message:"Good Morning",
+  message:"Welcome  👋",
 }
   return (
             <motion.nav className='flex  gap-[16px] w-[380px] items-center '
@@ -45,7 +45,7 @@ const user =
             >
                 <img className='w-14 h-14 rounded-full' src={"https://placebeard.it/200x200" || <Skeleton/>} alt="assdas" />
                 <div className='w-full grid place-content-start text-left tracking-wide'>
-                    <p className='text-neutral-600'>{user.message || <Skeleton />} 👋</p>
+                    <p className='text-neutral-600'>{user.message || <Skeleton />} </p>
                     <h1 className='font-bold text-xl leading-6'>{user.name || <Skeleton />}</h1>
                 </div>
                 <div className='gap-3 flex items'>

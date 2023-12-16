@@ -7,6 +7,8 @@ import WifiOutlinedIcon from '@mui/icons-material/WifiOutlined';
 import { motion } from "framer-motion";
 
 const Cards = () => {
+
+ 
   const cards = [
     {
       id: 1,
@@ -15,7 +17,7 @@ const Cards = () => {
       card_number: "**** **** **** 4578",
       exp: "06/25",
       provider: "visa",
-      img: "https://wallpapers.com/images/hd/dark-gradient-6bly12umg2d4psr2.jpg",
+      img: "https://static.vecteezy.com/system/resources/previews/010/742/835/non_2x/paper-cut-style-design-for-branding-advertising-with-abstract-shapes-modern-background-for-covers-invitations-posters-banners-flyers-placards-illustration-free-vector.jpg",
     },
     {
       id: 2,
@@ -24,7 +26,7 @@ const Cards = () => {
       card_number: "**** **** **** 4792",
       exp: "02/23",
       provider: "mastercard",
-      img: "https://wallpapers.com/images/hd/dark-gradient-6bly12umg2d4psr2.jpg",
+      img: "https://static.vecteezy.com/system/resources/previews/010/742/835/non_2x/paper-cut-style-design-for-branding-advertising-with-abstract-shapes-modern-background-for-covers-invitations-posters-banners-flyers-placards-illustration-free-vector.jpg",
     },
     {
       id: 3,
@@ -33,51 +35,53 @@ const Cards = () => {
       card_number: "**** **** **** 5772",
       exp: "02/23",
       provider: "mastercard",
-      img: "https://wallpapers.com/images/hd/dark-gradient-6bly12umg2d4psr2.jpg",
+      img: "https://static.vecteezy.com/system/resources/previews/010/742/835/non_2x/paper-cut-style-design-for-branding-advertising-with-abstract-shapes-modern-background-for-covers-invitations-posters-banners-flyers-placards-illustration-free-vector.jpg",
     },
   ];
   
   return (
     <>
       <Swiper
-      className="w-[290px] sm:w-[330px] h-[170px] sm:h-[194px] text-white rounded-3xl"
+      className="w-[290px] sm:w-[330px] h-[170px] sm:h-[194px] text-white "
           effect="cards"
           modules={[Pagination, EffectCards]}
           grabCursor={true}
       >
         {cards.map((card) => (
-          <SwiperSlide className="text-white rounded-3xl backdrop-blur-md bg-[#246BFD40]" key={card.id} >
 
-                <div id="card-img" className=" relative object-cover h-48 w-96 rounded-3xl backdrop-blur-3xl">
-                  <div className="w-full px-8 absolute top-8">
-                    <div className="flex justify-between">
-                      <div className="">
-                        <p className="font-semibold text-3xl tracking-widest">
-                          {card.onhold}
-                        </p>
-                      </div>
-                        <WifiOutlinedIcon className="h-6 w-6 transform rotate-90"/>
-                    </div>
-                    <div className="pt-8">
-                      <p className="font-medium tracking-more-wider flex">
-                        {card.card_number}
-                      </p>
-                    </div>
-                    <div className="pt-3 pr-3">
-                      <div className="flex justify-start gap-8">
-                        <div className="flex justify-start content-start items-start">
-                          <p className="font-semibold  text-md line-clamp-1 flex items-start content-start">{card.name_on_card}</p>
-   
-                        </div>
-                        <div className=" ">
-                          <p className="font-medium tracking-wider text-sm">
-                            {card.exp}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+    <SwiperSlide key={card.id} className="-[380px] h-[180px] bg-primary-500 rounded-[24px] overflow-hidden bg-black ">
+      <div className="relative h-[180px] bg-[url(group.png)] bg-[100%_100%] ">
+      <img id="imagen" className="h-full w-full" alt="Group" src={card.img} />
+        <div className="w-[316px] h-[125px] gap-[12px] absolute top-[28px] left-[32px] flex items-start">
+          <div className="flex-col gap-[16px] relative flex-1 grow flex items-start">
+            <div className="flex relative self-stretch mt-[-0.38px] font-body-large-bold font-[number:var(--body-large-bold-font-weight)] text-others-white text-[length:var(--body-large-bold-font-size)] tracking-[var(--body-large-bold-letter-spacing)] leading-[var(--body-large-bold-line-height)] [font-style:var(--body-large-bold-font-style)]">
+              M-Card
+            </div>
+            <div className="w-fit font-h4-bold font-[number:var(--h4-bold-font-weight)] text-[length:var(--h4-bold-font-size)] tracking-[var(--h4-bold-letter-spacing)] leading-[var(--h4-bold-line-height)] whitespace-nowrap relative text-others-white [font-style:var(--h4-bold-font-style)]">
+              {card.card_number}
+            </div>
+            <div className="flex items-center gap-[32px] relative self-stretch w-full flex-[0_0_auto]">
+              <div className="inline-flex items-start gap-[8px] flex-[0_0_auto] flex-col relative">
+                <div className="relative ">
+                  Card Holder name
+                </div>
+                <div className="relative font-bold">
+                  {card.name_on_card}
+                </div>
+              </div>
+              <div className="flex w-[54px] items-start gap-[8px] flex-col relative">
+                <div className="self-stretch font-body-large-semibold font-[number:var(--body-large-semibold-font-weight)] text-[length:var(--body-large-semibold-font-size)] tracking-[var(--body-large-semibold-letter-spacing)] leading-[var(--body-large-semibold-line-height)] relative text-others-white [font-style:var(--body-large-semibold-font-style)]">
+                  {card.exp}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="inline-flex items-end justify-between self-stretch flex-[0_0_auto] flex-col relative">
+            {/* PROVIDER ICON */}
+          </div>
         </div>
+      </div>
+
           </SwiperSlide>
         ))}
       </Swiper>

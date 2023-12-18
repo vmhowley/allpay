@@ -51,7 +51,7 @@ const Cards = () => {
 
     <SwiperSlide key={card.id} className="-[380px] h-[180px] bg-primary-500 rounded-[24px] overflow-hidden bg-black ">
       <div className="relative h-[180px] bg-[url(group.png)] bg-[100%_100%] ">
-      <img id="imagen" className="h-full w-full" alt="Group" src={card.img} />
+      <img id="imagen" className={card.id == '1' ? 'h-full w-full saturate-200':null || card.id == '2' ? 'grayscale w-full h-full':'blur-sm w-full h-full' }  alt="Group" src={card.img} />
         <div className="w-[316px] h-[125px] gap-[12px] absolute top-[28px] left-[32px] flex items-start">
           <div className="flex-col gap-[16px] relative flex-1 grow flex items-start">
             <div className="flex relative self-stretch mt-[-0.38px] font-body-large-bold font-[number:var(--body-large-bold-font-weight)] text-others-white text-[length:var(--body-large-bold-font-size)] tracking-[var(--body-large-bold-letter-spacing)] leading-[var(--body-large-bold-line-height)] [font-style:var(--body-large-bold-font-style)]">

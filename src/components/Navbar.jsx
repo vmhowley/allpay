@@ -5,6 +5,7 @@ import DiscountOutlinedIcon from '@mui/icons-material/DiscountOutlined';
 import { motion, useScroll  } from 'framer-motion';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import db from '../DataBase.json'
 function Navbar() {
 
     const { scrollY } = useScroll();
@@ -46,7 +47,7 @@ const user =
                 <img className='w-14 h-14 rounded-full' src={"https://placebeard.it/200x200" || <Skeleton/>} alt="assdas" />
                 <div className='w-full grid place-content-start text-left tracking-wide'>
                     <p className='text-neutral-600'>{user.message || <Skeleton />} </p>
-                    <h1 className='font-bold text-xl leading-6'>{user.name || <Skeleton />}</h1>
+                    <h1 className='font-bold text-xl leading-6'>{db[0].name || <Skeleton />}</h1>
                 </div>
                 <div className='gap-3 flex items'>
                     <DiscountOutlinedIcon />

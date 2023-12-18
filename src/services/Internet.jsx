@@ -57,59 +57,56 @@ function Internet() {
         </div>
         
       ) : (
-        <div className="grid gap-4 justify-center">
-          <div className="w-96 h-96 p-7 bg-white rounded-3xl shadow flex-col justify-start items-center gap-6 inline-flex">
-            <div className="w-20 h-20 relative">
-              <img
-                className="w-20 h-20 left-0 top-0 absolute rounded-full"
-                src={Avatar}
-              />
+        <div className="grid gap-2 place-items-center ">
+        <div className="p-7 bg-white rounded-3xl  flex-col  items-center gap-6 inline-flex  shadow-rose-500  shadow  ">
+          <div className="w-20 h-20 relative">
+            <img
+              className="w-20 h-20 left-0 top-0 absolute rounded-full"
+              src={Avatar}
+            />
+          </div>
+          <div className="w-80   relative">
+            <div className="w-80 h-px left-0 top-0 absolute border border-zinc-100"></div>
+          </div>
+          <div className="self-stretch justify-start items-center gap-3 inline-flex">
+            <div className="grow shrink basis-0 text-zinc-600 text-base font-medium font-['Urbanist'] leading-snug tracking-tight text-left">
+              Bill (USD)
             </div>
-            <div className="w-80 h-px relative">
-              <div className="w-80 h-px left-0 top-0 absolute border border-zinc-100"></div>
+            <div className="text-right text-neutral-800 text-lg font-semibold font-['Urbanist'] leading-relaxed tracking-tight">
+              $115.50
             </div>
-            <div className="self-stretch justify-start items-center gap-3 inline-flex">
-              <div className="grow shrink basis-0 text-zinc-600 text-base font-medium font-['Urbanist'] leading-snug tracking-tight text-left">
-                Bill (USD)
-              </div>
-              <div className="text-right text-neutral-800 text-lg font-semibold font-['Urbanist'] leading-relaxed tracking-tight">
-                $115.50
-              </div>
+          </div>
+          <div className="self-stretch justify-start items-center gap-3 inline-flex">
+            <div className="grow shrink basis-0 text-zinc-600 text-base font-medium font-['Urbanist'] leading-snug tracking-tight text-left">
+              Name
             </div>
-            <div className="self-stretch justify-start items-center gap-3 inline-flex">
-              <div className="grow shrink basis-0 text-zinc-600 text-base font-medium font-['Urbanist'] leading-snug tracking-tight text-left">
-                Name
-              </div>
-              <div className="text-right text-neutral-800 text-lg font-semibold font-['Urbanist'] leading-relaxed tracking-tight">
-                Andrew Ainsley
-              </div>
+            <div className="text-right text-neutral-800 text-lg font-semibold font-['Urbanist'] leading-relaxed tracking-tight">
+              Andrew Ainsley
             </div>
-            <div className="self-stretch justify-start items-center gap-3 inline-flex">
-              <div className="grow shrink basis-0 text-zinc-600 text-base font-medium font-['Urbanist'] leading-snug tracking-tight text-left">
-                Customer ID
-              </div>
-              <div className="text-right text-neutral-800 text-lg font-semibold font-['Urbanist'] leading-relaxed tracking-tight">
-                37173838939
-              </div>
+          </div>
+          <div className="self-stretch justify-start items-center gap-3 inline-flex">
+            <div className="grow shrink basis-0 text-zinc-600 text-base font-medium font-['Urbanist'] leading-snug tracking-tight text-left">
+              Customer ID
             </div>
-            <div className="self-stretch justify-start items-center gap-3 inline-flex">
-              <div className="grow shrink basis-0 text-zinc-600 text-base font-medium font-['Urbanist'] leading-snug tracking-tight text-left">
-                Status
-              </div>
-              <div className="px-2.5 py-1.5 bg-rose-500 rounded-md justify-center items-center gap-2 flex">
-                <div className="text-white text-xs font-semibold font-['Urbanist'] tracking-tight">
-                  Unpaid
-                </div>
+            <div className="text-right text-neutral-800 text-lg font-semibold font-['Urbanist'] leading-relaxed tracking-tight">
+              37173838939
+            </div>
+          </div>
+          <div className="self-stretch justify-start items-center gap-3 inline-flex">
+            <div className="grow shrink basis-0 text-zinc-600 text-base font-medium font-['Urbanist'] leading-snug tracking-tight text-left">
+              Status
+            </div>
+            <div className="px-2.5 py-1.5 bg-rose-500 rounded-md justify-center items-center gap-2 flex">
+              <div className="text-white text-xs font-semibold font-['Urbanist'] tracking-tight">
+                Unpaid
               </div>
             </div>
           </div>
-          <div className="w-96 h-14 px-4 py-4 bg-blue-600 rounded-full shadow justify-center items-center gap-2.5 inline-flex">
-            <div className="grow shrink basis-0 h-5 text-center text-white text-base font-bold font-['Urbanist'] leading-snug tracking-tight">
-              Confirm Payment
-            </div>
-          </div>
-      
         </div>
+        <button className="w-full h-14 px-4 py-4 bg-blue-600 rounded-full shadow justify-center items-center gap-2.5 inline-flex text-white">
+            Confirm Payment
+        </button>
+      </div>
         
       )}
     </motion.div>

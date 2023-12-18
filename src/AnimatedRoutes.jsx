@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import About from "./pages/About";
@@ -10,6 +12,7 @@ import Internet from "./services/Internet";
 import Home from "./pages/Home";
 import { AnimatePresence } from "framer-motion";
 import InOut from "./pages/InOut";
+import propType from 'prop-types'
 
 const  AnimatedRoutes = ({isVisible}) => {
   const location = useLocation();

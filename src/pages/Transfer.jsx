@@ -3,6 +3,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Avatar from '../images/avatar.png'
 import Back from '../components/Back';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const all = [
     {

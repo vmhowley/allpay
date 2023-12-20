@@ -30,7 +30,7 @@ const Cards = () => {
       >
         {db.users[0].cards.map((card) => (
           
-          <SwiperSlide key={card.id} className="-[380px] h-[180px] bg-primary-500 rounded-[24px] overflow-hidden bg-black ">
+          <SwiperSlide key={card.id} className="w-[380px] h-[180px] bg-primary-500 rounded-[24px] overflow-hidden bg-black ">
       <div className="relative h-[180px] bg-[url(group.png)] bg-[100%_100%] ">
       <img id="imagen" className={card.id == '1' ? 'h-full w-full saturate-200': 'h-full w-full saturate-200 brightness-75' }  alt="Group" src={card.id == '1' ? bgcard2: bgcard1} />
         <div className="w-[316px] h-[125px] gap-[12px] absolute top-[28px] left-[32px] flex items-start">

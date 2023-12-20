@@ -12,7 +12,7 @@ import { AnimatePresence } from "framer-motion";
 import InOut from "./pages/InOut";
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
-
+import Navbar from "./components/Navbar";
 import AnimatedRoutes from "./AnimatedRoutes";
 import { appBarClasses } from "@mui/material";
 import TypeAmount from "./pages/TypeAmount";
@@ -23,7 +23,9 @@ import TypeAmount from "./pages/TypeAmount";
 const App = (isVisible) =>  {
 
   return (
+    
     <BrowserRouter>  
+
 <AnimatePresence>
       {isVisible &&(
       <Routes location={location} key={location.pathname}>

@@ -9,7 +9,7 @@ import {Wallet} from 'react-iconly'
 
 function Bottombar() {
   return (    
-        <nav id='bottom-bar' className='pb-1 text-sm flex justify-between items-center h-[82px] rounded-t-md fixed bottom-0 left-0 bg-white dark:bg-[#181A20D9]  backdrop-blur-xl  w-full  text-[#9E9E9E]'>
+        <nav id='bottom-bar' className='pb-1 text-sm flex justify-between items-center h-[82px] rounded-t-md fixed bottom-0 left-0 bg-white dark:bg-[#181A20D9]  backdrop-blur-xl  w-full  text-[#9E9E9E] z-10'>
             <Link to='/' className='flex flex-col  place-items-center gap-[2px] flex-1 text-[#246BFD]'>
             <Home  />
               Home

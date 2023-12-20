@@ -9,7 +9,7 @@ function Actions() {
 
 const navigate = useNavigate ();    
     return (
-    <div className='flex justify-center content-center items-center text-[#246BFD]'>
+    <div className='flex justify-center content-center items-center text-[#246BFD] z-10'>
         <div onClick={() => {navigate('/transfer')}} className='flex flex-col justify-center items-center gap-2 flex-1  h-[80px] '>
             <div className='bg-[#E9F0FF] dark:bg-[#35383F] p-4 rounded-full'>
             <SendOutlinedIcon className='  transform -rotate-45 ' />

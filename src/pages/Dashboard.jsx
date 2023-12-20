@@ -21,18 +21,18 @@ function Dashboard() {
     
     return (
        
-       <div className="flex">
+       <div className="">
 {loading ? ( <Skeleton className="h-40 flex-1"/> ):(
     <motion.div 
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
     >
-            <div className="gap-6 grid mb-20 p-2 sm:p-0 ">
             {<Navbar /> || <Skeleton />}
+            <div className="gap-6 grid mb-20 p-2 sm:p-0 ">
             {<Cards /> || <Skeleton />}
             <Actions />
-            <div className="flex justify-between font-bold">
+            <div className="flex justify-between tablet:w-full tablet:pr-2 font-bold">
                 <h1 className="text-xl leading-6">Services</h1>
                 <Link to='/services' className="text-[#246BFD] ">See All</Link>
             </div>

@@ -18,44 +18,9 @@ html, body {
   text-align: center;
   margin-top: 1rem;
   display: flex;
-}
-
-body::-webkit-scrollbar {
-display: none;
+  @apply dark:bg-[#181A20] dark:text-white;  
 }
 
 
-body {
--ms-overflow-style: none;
-scrollbar-width: none;
-background-color: #FEFFFA;
-@apply dark:bg-[#181A20] dark:text-white;  
 
-}
-
-header {
-  height: 110px;
-  display: flex;
-  align-items: center;
-  padding-block: 10px;
-}
-
-header .site-logo {
-  margin-right: auto;
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 25px;
-}
-
-header a {
-  text-decoration: none;
-  color: #4D4D4D;
-  font-weight: 600;
-  padding: 5px 20px;
-}
-
-header a:hover {
-  color: #161616;
-  text-decoration: underline;
-}
 

@@ -3,12 +3,18 @@ import Avatar from "../images/avatar.png";
 import Back from "../components/Back";
 import ElectricBoltRoundedIcon from "@mui/icons-material/ElectricBoltRounded";
 import { motion } from "framer-motion";
+import db from "../DataBase.json"
 
 function Electricity() {
+  const client = db.users.find(isClient);
+  
   function handleClick() {
     setClick(click + 1);
   }
-
+  
+  function isClient(db) {
+    return db.id == '1';
+  }
   const [click, setClick] = React.useState(0);
 
   return (
@@ -76,7 +82,7 @@ function Electricity() {
                 Name
               </div>
               <div className="text-right text-neutral-800 text-lg font-semibold font-['Urbanist'] leading-relaxed tracking-tight">
-                Andrew Ainsley
+                {client.name}
               </div>
             </div>
             <div className="self-stretch justify-start items-center gap-3 inline-flex">

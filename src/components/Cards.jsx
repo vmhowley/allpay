@@ -5,53 +5,33 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-cards';
 import WifiOutlinedIcon from '@mui/icons-material/WifiOutlined';
 import { motion } from "framer-motion";
-import db from '../DataBase.json';
+import Skeleton from "react-loading-skeleton";
+import db from "../DataBase.json";
+import bgcard2 from '../images/cardsbg.png'
+import bgcard from '../images/bg-card2.png'
+
 const Cards = () => {
 
- 
-  const cards = [
-    {
-      id: 1,
-      name_on_card: "Adrew Ainsley",
-      onhold:"$5,600",
-      card_number: "**** **** **** 4578",
-      exp: "06/25",
-      provider: "visa",
-      img: "https://static.vecteezy.com/system/resources/previews/010/742/835/non_2x/paper-cut-style-design-for-branding-advertising-with-abstract-shapes-modern-background-for-covers-invitations-posters-banners-flyers-placards-illustration-free-vector.jpg",
-    },
-    {
-      id: 2,
-      name_on_card: "Adrew Ainsley",
-      onhold:"$15,692",
-      card_number: "**** **** **** 4792",
-      exp: "02/23",
-      provider: "mastercard",
-      img: "https://static.vecteezy.com/system/resources/previews/010/742/835/non_2x/paper-cut-style-design-for-branding-advertising-with-abstract-shapes-modern-background-for-covers-invitations-posters-banners-flyers-placards-illustration-free-vector.jpg",
-    },
-    {
-      id: 3,
-      name_on_card: "Adrew Ainsley",
-      onhold:"$2,900",
-      card_number: "**** **** **** 5772",
-      exp: "02/23",
-      provider: "mastercard",
-      img: "https://static.vecteezy.com/system/resources/previews/010/742/835/non_2x/paper-cut-style-design-for-branding-advertising-with-abstract-shapes-modern-background-for-covers-invitations-posters-banners-flyers-placards-illustration-free-vector.jpg",
-    },
-  ];
-  
+  const client = db.users.find(isClient);
+
+  function isClient(db) {
+    return db.id == '1';
+  }
+
   return (
     <>
+    {client.cards ? 
       <Swiper
       className="w-[290px] sm:w-[330px] h-[170px] sm:h-[194px] text-white "
-          effect="cards"
-          modules={[Pagination, EffectCards]}
-          grabCursor={true}
+      effect="cards"
+      modules={[Pagination, EffectCards]}
+      grabCursor={true}
       >
-        {db[0].cards.map((card) => (
-
-    <SwiperSlide key={card.id} className="-[380px] h-[180px] bg-primary-500 rounded-[24px] overflow-hidden bg-black ">
+        {db.users[0].cards.map((card) => (
+          
+          <SwiperSlide key={card.id} className="-[380px] h-[180px] bg-primary-500 rounded-[24px] overflow-hidden bg-black ">
       <div className="relative h-[180px] bg-[url(group.png)] bg-[100%_100%] ">
-      <img id="imagen" className={card.id == '1' ? 'h-full w-full saturate-200':null || card.id == '2' ? 'sepia w-full h-full':'blur-sm w-full h-full' }  alt="Group" src={card.img} />
+      <img id="imagen" className='h-full w-full saturate-200'  alt="Group" src={card.id == '2' ? bgcard: bgcard2} />
         <div className="w-[316px] h-[125px] gap-[12px] absolute top-[28px] left-[32px] flex items-start">
           <div className="flex-col gap-[16px] relative flex-1 grow flex items-start">
             <div className="flex relative self-stretch mt-[-0.38px] font-body-large-bold font-[number:var(--body-large-bold-font-weight)] text-others-white text-[length:var(--body-large-bold-font-size)] tracking-[var(--body-large-bold-letter-spacing)] leading-[var(--body-large-bold-line-height)] [font-style:var(--body-large-bold-font-style)]">
@@ -85,6 +65,7 @@ const Cards = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+    :<Skeleton className="w-[290px] sm:w-[330px] h-[170px] sm:h-[194px] rounded-xl" />}
     </>
   );
 };

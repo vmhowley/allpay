@@ -33,10 +33,15 @@ function update() {
         hidden: { opacity: 0, y: -25 }
       };
 
-const user = 
+const message = 
 {
-  name:"victor morillo",
-  message:"Welcome  👋",
+  name:"Welcome",
+  message:"Good Morning  👋",
+}
+const client = db.users.find(isClient);
+
+function isClient(db) {
+  return db.id == '1';
 }
   return (
             <motion.nav className='flex  gap-[16px] w-[380px] items-center '
@@ -46,8 +51,8 @@ const user =
             >
                 <img className='w-14 h-14 rounded-full' src={"https://placebeard.it/200x200" || <Skeleton/>} alt="assdas" />
                 <div className='w-full grid place-content-start text-left tracking-wide'>
-                    <p className='text-neutral-600'>{user.message || <Skeleton />} </p>
-                    <h1 className='font-bold text-xl leading-6'>{db[0].name || <Skeleton />}</h1>
+                    <p className='text-neutral-600'>{message.message || <Skeleton />} </p>
+                    <h1 className='font-bold text-xl leading-6'>{client.name || <Skeleton />}</h1>
                 </div>
                 <div className='gap-3 flex items'>
                     <DiscountOutlinedIcon />

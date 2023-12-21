@@ -49,7 +49,7 @@ function isClient(db) {
       animate={hidden ? "hidden" : "visible"}
       transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
       >
-                <img className='w-14 h-14 rounded-full' src={"https://api.dicebear.com/7.x/pixel-art/svg?seed="+ client.name || <Skeleton/>} alt="assdas" />
+                <img className='w-14 h-14 rounded-full' src={client.img + client.name || <Skeleton/>} alt="assdas" />
                 <div className='w-screen grid place-content-start text-left tracking-wide'>
                     <p className='text-neutral-600'>{message.message || <Skeleton />} </p>
                     <h1 className='font-bold text-xl leading-6'>{client.name || <Skeleton />}</h1>

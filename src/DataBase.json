@@ -3,6 +3,7 @@
 {
     "id":1,
     "name":"Victor Benito Musk",
+    "img":"https://api.dicebear.com/7.x/pixel-art/svg?seed=",
     "cards":
         [{
           "id": 1,
@@ -26,6 +27,7 @@
 {
   "id":2,
   "name":"John Smith",
+  "img":"https://api.dicebear.com/7.x/pixel-art/svg?seed=",
   "cards":
       [{
         "id": 1,

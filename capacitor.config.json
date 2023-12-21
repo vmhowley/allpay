@@ -1,0 +1,8 @@
+{
+  "appId": "com.allpay.app",
+  "appName": "allpay",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}

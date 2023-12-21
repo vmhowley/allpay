@@ -5,6 +5,8 @@ import Mcdonald from "../images/mcdonald.svg";
 import AirBnb from "../images/airbnb.svg";
 import Darron from "../images/Darron.svg";
 import Netflix from "../images/netflix.svg";
+import {ArrowUpSquare} from 'react-iconly'
+import {ArrowDownSquare} from 'react-iconly'
 
 function InOut() {
   const transactions = [
@@ -49,6 +51,7 @@ function InOut() {
       img: Netflix,
     },
   ];
+  
   return (
     <>
       <Back name="In & Out Payment" />
@@ -72,7 +75,7 @@ function InOut() {
           {transactions.map((trans) => (
             <div
               key={trans.id}
-              className="flex gap-4 bg-white items-center rounded h-[98px] shadow-md  p-2 after:animate-pulse"
+              className="flex gap-4  dark:bg-[#1F222A] bg-white items-center rounded-3xl h-[98px] shadow-md  p-2 after:animate-pulse"
             >
               <div className="grid items-center">
                 <img className="rounded w-20" src={trans.img} alt="comercio" />
@@ -95,7 +98,7 @@ function InOut() {
                 >
                   {trans.amount}
                 </h1>
-                <p className="text-neutral-500">{trans.type}</p>
+                <p className="text-neutral-500 dark:text-white flex  text-xs font-extralight">{trans.type == 'Expense' ? <ArrowUpSquare set="two-tone" primaryColor="#FF575C" secondaryColor="#FF8285" size={'small'}/>: <ArrowDownSquare set="two-tone" primaryColor="#246BFD" secondaryColor="#6F9EFF"  size={'small'}/>}{trans.type}</p>
               </div>
             </div>
           ))}

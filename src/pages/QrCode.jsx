@@ -1,16 +1,12 @@
 import React from 'react'
 import { Camera, CameraResultType } from '@capacitor/camera';
 
-
-
-
 function QrCode() {
-
 
     const takePicture = async () => {
         const image = await Camera.getPhoto({
           quality: 90,
-          allowEditing: true,
+          allowEditing: false,
           resultType: CameraResultType.Uri
         });
       
@@ -29,7 +25,9 @@ function QrCode() {
 takePicture()      },[]);
   return (
     <>
+    <div>
         <img src="" alt="" />
+    </div>
     </>
     )
 }

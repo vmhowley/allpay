@@ -6,8 +6,9 @@ import { motion, useScroll  } from 'framer-motion';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import db from '../DataBase.json'
-function Navbar() {
 
+
+function Navbar() {
     const { scrollY } = useScroll();
 /** add useState hook to manage state **/
 const [hidden, setHidden] = React.useState(false);
@@ -21,9 +22,23 @@ function update() {
 
   }
 }
+const [user, setUser] = React.useState({
+  name:''
+})
+const API_URL="http://localhost:9000/";
+
+async function refreshNotes(){
+  fetch(API_URL+"/user").then(response=>response.json())
+  .then(data=>{
+      setUser({name: data});
+  })
+}
+
+refreshNotes()
 
     React.useEffect(() => {
         return scrollY.on("change", (() => update()));
+        
       });
 
       const variants = {

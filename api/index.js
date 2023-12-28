@@ -1,28 +1,21 @@
-var Express = require('express');
-var Mongoclient = require('mongodb').MongoClient;
-var cors = require('cors');
-const multer = require('multer');
+const { MongoClient } = require('mongodb');
+const Express = require('express');
+const app = Express();
+const uri ="mongodb://localhost:27017/";
+const client = new MongoClient(uri);
 
-var app=Express();
-app.use(cors());
-
-var CONNECTION_STRING = "mongodb+srv://admin:vmhowley123@cluster0.vdiynua.mongodb.net/?retryWrites=true&w=majority";
-
-
-
-var DATABASENAME="allpaydb";
-var database;
-
-app.listen(5038,()=>{
-        Mongoclient.connect(CONNECTION_STRING, (error, client)=>{
-            database = client.db(DATABASENAME);
-            console.log("Mongo DB Connection Successful 5038");
-        })
+var db;
+app.listen(9000, async ()=>{
+  console.log('listening port 9000')
+   await client.connect();
+    db =  client.db('local');
+  console.log('Mongo Connected')
 })
 
-app.get('/api/allpay/getnotes', (request,response)=>{
-    database.collection('allpaycollection').find({}).toArray((error,result)=> { 
-        response.send(result);
-    });
+app.get('/1', async(req,res)=>{
+  const collection = await db.collection('startup_log');
+  // Find the first document in the collection
+  const first = await collection.find({}).toArray() 
+  res.send(first);
 })
 

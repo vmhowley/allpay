@@ -4,12 +4,9 @@ import { Pagination, EffectCards } from 'swiper/modules';
 import "swiper/css";
 import 'swiper/css/pagination';
 import 'swiper/css/effect-cards';
-import WifiOutlinedIcon from '@mui/icons-material/WifiOutlined';
-import { motion } from "framer-motion";
 import Skeleton from "react-loading-skeleton";
 import db from "../DataBase.json";
 import bgcard2 from '../images/cardsbg.png'
-import bgcard from '../images/bg-card2.png'
 import bgcard1 from '../images/bg-card.png'
 
 const Cards = () => {
@@ -26,9 +23,7 @@ const Cards = () => {
 
   const [client,setClient] = React.useState({});
 
-  function isClient(db) {
-    return db.id == '1';
-  }
+
   React.useEffect(() => {
     
     makeAPICall();

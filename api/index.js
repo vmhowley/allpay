@@ -19,18 +19,18 @@ app.listen(9000, async ()=>{
 
 
 app.get('/1', async(req,res)=>{
+  res.set('Access-Control-Allow-Origin', '*');
   const collection = await db.collection('allpaycollection');
   // Find the first document in the collection
   const first = await collection.find({ id: 1
   }).toArray() 
   res.send(first);
 }) 
+
 app.post('/user', async(req,res)=>{
   const collection = await db.collection('allpaycollection');
   // Find the first document in the collection
   const first = await collection.find({ name: req.body.name
   }).toArray() 
-  const jsondata = JSON.parse(first)
-  console.dir(req.body)
   res.send(first);
 })

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, EffectCards } from 'swiper/modules';
 import "swiper/css";
@@ -13,12 +14,25 @@ import bgcard1 from '../images/bg-card.png'
 
 const Cards = () => {
 
-  const client = db.users.find(isClient);
+  const makeAPICall = async () => {
+    try {
+      const response = await fetch("http://localhost:9000/1", { mode: "cors" });
+      const data = await response.json();
+      setClient(...data)
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const [client,setClient] = React.useState({});
 
   function isClient(db) {
     return db.id == '1';
   }
-
+  React.useEffect(() => {
+    
+    makeAPICall();
+  }, []);
   return (
     <>
     {client.cards ? 

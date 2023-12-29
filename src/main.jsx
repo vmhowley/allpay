@@ -8,7 +8,7 @@ import { defineCustomElements } from '@ionic/pwa-elements/loader';
 defineCustomElements(window);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+<React.Fragment>
     <App />
-  </React.StrictMode>,
-)
+</React.Fragment>
+    )

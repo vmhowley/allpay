@@ -1,5 +1,4 @@
-import React from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import About from "./pages/About";
 import Signin from "./login/Signin";
 import Signup from "./login/Signup";
@@ -11,7 +10,6 @@ import QrCode from "./pages/QrCode";
 import Home from "./pages/Home";
 import { AnimatePresence } from "framer-motion";
 import InOut from "./pages/InOut";
-import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import TypeAmount from "./pages/TypeAmount";
 import { App as CapacitorApp } from '@capacitor/app';

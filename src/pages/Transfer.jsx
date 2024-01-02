@@ -4,6 +4,8 @@ import Avatar from '../images/avatar.png'
 import Back from '../components/Back';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+"use client";
+import { Tabs } from "keep-react";
 
 const all = [
     {

@@ -1,17 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
-
+@font-face {
+  font-family: myFirstFont;
+  src: url(./assets/Urbanist-VariableFont_wght.ttf);
+}
 * {
   box-sizing: border-box;
 }
 
 
 html, body {
-  font-family: 'Urbanist', sans-serif;
+  font-family: 'myFirstFont';
   user-select: none;
   margin: 0 auto;
   padding: 0;

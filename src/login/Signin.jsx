@@ -1,6 +1,4 @@
-import React from "react";
 import SignLogo from "../images/signimg.png";
-import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 import { useNavigate } from "react-router-dom";
 import FbLogo from "../images/Fbicon.png";
 import GoogleIcon from "../images/google.png";
@@ -15,7 +13,7 @@ function Signin() {
     <div className="grid">
       <Back name='Sign In'/>
       <div className="grid gap-4 place-content-center place-items-center">
-        <img src={SignLogo} alt="logoSign" className="mt-8 " />
+        <img src={SignLogo} alt="logoSign" className="h-40 sm:h-52 mt-8" />
         <h1 className="font-bold text-5xl text-center  text-gray-700 ">Let&apos;s you in</h1>
         <div className="grid font-semibold gap-2 w-[380px] ">
           <button className="border bg-white rounded-xl  flex justify-center items-center gap-3 p-2 h-[60px]  font-bold">

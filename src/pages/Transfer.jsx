@@ -1,11 +1,12 @@
+"use client";
+import { Tabs } from "keep-react";
 import React from 'react'
 import SearchIcon from '@mui/icons-material/Search';
 import Avatar from '../images/avatar.png'
 import Back from '../components/Back';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-"use client";
-import { Tabs } from "keep-react";
+import { useNavigate, useHistory } from 'react-router-dom';
+
 
 const all = [
     {
@@ -116,18 +117,14 @@ const wallet = [
 ]
 
 
-function Transfer() {
-    const [tab, setTab] = React.useState('all');
+function Transfer( {person, setPerson}) {
     const navigate = useNavigate();
-    function handleTab (e) {
-        setTab(e)
-    }
-
+   
     function handleTransfer (e) {
         const name = e.currentTarget.querySelector('#name').innerHTML
         const account = e.currentTarget.querySelector('#account').innerHTML;
-        navigate('/type_amount');
-        console.log(name +' account: '+ account)
+        setPerson({...orderData, sender_name: 'hola'});
+        navigate('/type_amount', {state: {name:'name', account:'account'}});
     }
 
   
@@ -145,26 +142,10 @@ function Transfer() {
         <input className='rounded-xl dark:bg-[#1F222A] bg-[#F5F5F5] h-[56px]  ps-10 w-[360px]' type="text" placeholder='Search'/>
         </div>
         <div className='flex font-bold text-[#9E9E9E] justify-center gap-3 items-center'>
-            <div onClick={() => {handleTab('all'); }} >
-                <h1  className={tab === 'all' ?  'w-20 h-10 flex items-center content-center justify-center text-[#246BFD]': 'w-20 h-10 flex items-center content-center justify-center' } >All</h1>
-                <hr className={tab === 'all' ?  'h-1 bg-[#246BFD]': '' } />
-            </div>
-            <div onClick={() => {handleTab('favorite'); }} >
-                <h1 className={tab === 'favorite' ?  'w-20 h-10 flex items-center content-center justify-center text-[#246BFD]': 'w-20 h-10 flex items-center content-center justify-center' }>Favorite</h1>
-                <hr className={tab === 'favorite' ?  'h-1 bg-[#246BFD]': '' } />
-            </div>
-            <div onClick={() => {handleTab('bank'); }}>
-                <h1 className={tab === 'bank' ?  'w-20 h-10 flex items-center content-center justify-center text-[#246BFD]': 'w-20 h-10 flex items-center content-center justify-center' }>Bank</h1>
-                <hr className={tab === 'bank' ?  'h-1 bg-[#246BFD]': '' } />
-            </div>
-            <div onClick={() => {handleTab('e-wallet'); }}>
-                <h1 className={tab === 'e-wallet' ?  'w-20 h-10 flex items-center content-center justify-center text-[#246BFD]': 'w-20 h-10 flex items-center content-center justify-center' }>E-Wallet</h1>
-                <hr className={tab === 'e-wallet' ?  'h-1 bg-[#246BFD]': '' } />
-            </div>
-        </div>
-        <div  className='grid p-6 gap-4 divide-y'>
-
-            {tab === 'all' && all.map((beneficiarie) => 
+        <Tabs aria-label="Tabs" style="underline" >
+            <Tabs.Item active={true} title="All">
+        <div  className='grid p-6 gap-4 '>
+      {all.map((beneficiarie) => 
             <div onClick={(e) => {handleTransfer(e)}}  key={beneficiarie.id} className='flex gap-4'>
                 <img src={Avatar} alt="" />
             <div className='grid text-left'>
@@ -174,8 +155,17 @@ function Transfer() {
             <p id='account' className='text-sm'>{beneficiarie.account_number}</p>
             </div>
             </div>
-            </div>
+                </div>
                 )}
+                </div>
+      </Tabs.Item>
+      <Tabs.Item title="Favorite">Dashboard content</Tabs.Item>
+      <Tabs.Item title="Bank">Settings content</Tabs.Item>
+      <Tabs.Item title="E-wallet">Contacts content</Tabs.Item>
+      
+    </Tabs>
+
+            
                 {tab === 'favorite' && favorite.map(( beneficiarie) => 
                 
                 <div key={ beneficiarie.id} className='flex gap-4'>

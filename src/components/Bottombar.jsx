@@ -1,11 +1,7 @@
 import React from 'react'
-
 import { Link  } from 'react-router-dom'
-import {Home} from 'react-iconly'
-import {Chart} from 'react-iconly'
-import {Scan} from 'react-iconly'
-import {User} from 'react-iconly'
-import {Wallet} from 'react-iconly'
+import {Home, Chart, Scan, User, Wallet} from 'react-iconly'
+
 
 function Bottombar() {
   return (    

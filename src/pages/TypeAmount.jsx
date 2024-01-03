@@ -1,8 +1,16 @@
 import React from 'react'
+import { useNavigate, useLocation } from 'react-router-dom';
+import Transfer from './Transfer'
 
-function TypeAmount() {
+
+function TypeAmount(props) {
+
+  const [person, setPerson] = React.useState({});
+  
   return (
-    <div>TypeAmount</div>
+    <>
+      <Transfer person={person} setPerson={setPerson} />
+    </>
   )
 }
 

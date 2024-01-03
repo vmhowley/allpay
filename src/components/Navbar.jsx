@@ -14,7 +14,7 @@ function Navbar() {
       const data = await response.json();
       setUser(...data)
     } catch (e) {
-      console.log(e);
+      console.log(e); 
     }
   };
 
